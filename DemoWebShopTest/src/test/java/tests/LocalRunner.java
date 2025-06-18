@@ -20,13 +20,13 @@ public class LocalRunner {
 
         int randomNo = (int)(Math.random() * 1000);
 
-//        home.clickRegisterLink();
-//        register.register("John"+randomNo, "Doe", "john"+randomNo+".doe@mail.com", "Test1234");
-//        home.clickLogoutLink();
+       home.clickRegisterLink();
+       register.register("John"+randomNo, "Doe", "john"+randomNo+".doe@mail.com", "Test1234");
+       home.clickLogoutLink();
 
         home.clickLoginLink();
-//        login.login("john"+randomNo+".doe@mail.com", "Test1234");
-        login.login("john30.doe@mail.com", "Test1234");
+       login.login("john"+randomNo+".doe@mail.com", "Test1234");
+        // login.login("john30.doe@mail.com", "Test1234");
 
         home.clickComputerTab();
         home.clickDeskopOption();
