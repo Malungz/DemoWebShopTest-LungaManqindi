@@ -25,17 +25,23 @@ public class Billing extends BaseClass {
 
 
     public void enterDetailsForBilling(String country,String city, String address1, String postalCode,String phoneNumber) {
-        driver.findElement(country).sendKeys(country);
-        driver.findElement(city).sendKeys(city);
-        driver.findElement(address1).sendKeys(address1);
-        driver.findElement(postalCode).sendKeys(postalCode);
-        driver.findElement(phoneNumber).sendKeys(phoneNumber);
+        driver.findElement(this.country).sendKeys(country);
+        driver.findElement(this.city).sendKeys(city);
+        driver.findElement(this.address1).sendKeys(address1);
+        driver.findElement(this.postalCode).sendKeys(postalCode);
+        driver.findElement(this.phoneNumber).sendKeys(phoneNumber);
         driver.findElement(continueBilling).click();
-        driver.findElement(continueShipping).click();
-        driver.findElement(continueShippingMethod).click();
-        driver.findElement(continuePaymentMethod).click();
-        driver.findElement(continuePaymentInfo).click();
+        wait.until(ExpectedConditions.elementToBeClickable(continueShipping)); 
+        driver.findElement(continueShipping).click(); 
+        wait.until(ExpectedConditions.elementToBeClickable(continueShippingMethod)); 
+        driver.findElement(continueShippingMethod).click(); 
+        wait.until(ExpectedConditions.elementToBeClickable(continuePaymentMethod)); 
+        driver.findElement(continuePaymentMethod).click(); 
+        wait.until(ExpectedConditions.elementToBeClickable(continuePaymentInfo)); 
+        driver.findElement(continuePaymentInfo).click(); 
+        wait.until(ExpectedConditions.elementToBeClickable(continueConfirmOrder)); 
         driver.findElement(continueConfirmOrder).click();
+
 
         if(lblthankyou.getText().equal("Thank you")){
             System.out.println("Successfully validated the Thank You text");
