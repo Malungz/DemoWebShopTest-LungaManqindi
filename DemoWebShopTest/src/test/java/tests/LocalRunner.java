@@ -39,6 +39,9 @@ public class LocalRunner {
         cart.validateTotalAfterItemRemoved();
         cart.proceedToCheckout();
 
+        bill.enterDetailsForBilling("South Africa","Cape Town","7 Sagwityi","7784","0987654321"); 
+        account.validateOrderCreated();
+
         driver.quit();
     }
 }
