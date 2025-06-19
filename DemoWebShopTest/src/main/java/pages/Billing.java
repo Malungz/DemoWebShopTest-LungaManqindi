@@ -2,6 +2,8 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions; 
+
 
 public class Billing extends BaseClass {
 
@@ -22,6 +24,7 @@ public class Billing extends BaseClass {
     By continuePaymentInfo = new By.ByXpath("//div[@class='buttons']//input[@onclick='PaymentInfo.save()']");
     By continueConfirmOrder = new By.ByXpath("//div[@class='buttons']//input[@onclick='ConfirmOrder.save()']");
     By lblthankyou = new ByXpath("//div[@class='page-title']");
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(300));
 
 
     public void enterDetailsForBilling(String country,String city, String address1, String postalCode,String phoneNumber) {
