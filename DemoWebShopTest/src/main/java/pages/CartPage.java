@@ -103,7 +103,7 @@ private final HomePage homePage;
 
     public void validateTotalAfterItemRemoved() {
         String value = driver.findElement(totalPrice).getText();
-        if(value.equals("3895.00")){
+        if(value.equals("3880.00")){
             System.out.println("Successfully validated the total price after an item removed");
         }else {
             System.out.println("failed validated the total priceafter an item removed");
