@@ -6,6 +6,8 @@ import pages.CartPage;
 import pages.HomePage;
 import pages.Login;
 import pages.RegisterPage;
+import pages.Billing;
+import pages.AccountPage;
 
 public class LocalRunner {
 
@@ -17,6 +19,8 @@ public class LocalRunner {
         HomePage home = new HomePage(driver);
         RegisterPage register = new RegisterPage(driver);
         Login login = new Login(driver);
+        Billing bill = new Billing(driver); 
+        AccountPage account = new AccountPage(driver);
 
         int randomNo = (int)(Math.random() * 1000);
 
